@@ -3,11 +3,13 @@
    on: [push]
 
    jobs:
+    build:
       runs-on: ubuntu-latest
+
       steps:
-      - name: checkout repo
-        uses: actions/checkout@v2
-      - name: build application
-        run: make install
-      - name: linting
-        run: make lint
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - run: make install
+      - run: make lint
