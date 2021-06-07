@@ -1,6 +1,6 @@
 {
   "name": "@hexlet/code",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "[![Actions Status](https://github.com/Bohdan2241/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/Bohdan2241/frontend-project-lvl1/actions)",
   "main": "index.js",
   "type": "module",
@@ -8,7 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "brain-games": "bin/brain-games.js"
+    "brain-games": "bin/brain-games.js",
+    "brain-even": "bin/brain-even.js"
   },
   "repository": {
     "type": "git",
