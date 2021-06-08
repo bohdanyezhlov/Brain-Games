@@ -90,4 +90,41 @@ const brainCalc = () => {
   }
 };
 
-export { brainEven, brainCalc };
+// brain-gcd.js
+
+const getGcd = (a, b) => {
+  if (b === 0) {
+    return a;
+  }
+
+  return getGcd(b, a % b);
+};
+
+const brainGcd = () => {
+  welcome();
+
+  console.log('Find the greatest common divisor of given numbers.');
+
+  for (let step = 0; step <= 3;) {
+    if (step === 3) {
+      console.log(`Congratulations, ${name}!`);
+      break;
+    }
+
+    const firstNumber = getRandomNum();
+    const secondNumber = getRandomNum();
+    console.log(`Qusetion: ${firstNumber} ${secondNumber}`);
+
+    const answer = readlineSync.question('Your answer: ');
+    const solution = getGcd(firstNumber, secondNumber);
+
+    if (Number(answer) === solution) {
+      console.log('Correct!');
+      step += 1;
+    } else {
+      return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${solution}'. \nLet's try again, ${name}!`);
+    }
+  }
+};
+
+export { brainEven, brainCalc, brainGcd };
