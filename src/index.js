@@ -29,14 +29,15 @@ const brainEven = () => {
     const number = getRandomNum();
     console.log(`Qusetion: ${number}`);
     const answer = readlineSync.question('Your answer: ');
+    const solution = isEven(number);
 
-    if (isEven(number) && (answer === 'yes')) {
+    if (solution && (answer === 'yes')) {
       console.log('Correct!');
       step += 1;
-    } else if (!(isEven(number)) && (answer === 'no')) {
+    } else if (!solution && (answer === 'no')) {
       console.log('Correct!');
       step += 1;
-    } else if (!(isEven(number)) && (answer !== 'no')) {
+    } else if (!solution && (answer !== 'no')) {
       return console.log(`'${answer}' is wrong answer ;(. Correct answer was 'no'. \nLet's try again, ${name}!`);
     } else {
       return console.log(`'${answer}' is wrong answer ;(. Correct answer was 'yes'. \nLet's try again, ${name}!`);
