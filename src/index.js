@@ -1,5 +1,4 @@
 import readlineSync from 'readline-sync';
-import { welcome, name } from './cli.js';
 
 // brain-even.js
 
@@ -16,7 +15,11 @@ const getRandomNum = () => {
 };
 
 const brainEven = () => {
-  welcome();
+  console.log('Welcome to the Brain Games!');
+
+  const name = readlineSync.question('May I have your name? ');
+
+  console.log(`Hello ${name}!`);
 
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
@@ -31,16 +34,18 @@ const brainEven = () => {
     const answer = readlineSync.question('Your answer: ');
     const solution = isEven(number);
 
-    if (solution && (answer === 'yes')) {
+    if ((answer === 'yes') && solution) {
       console.log('Correct!');
       step += 1;
-    } else if (!solution && (answer === 'no')) {
+    } else if ((answer === 'no') && !solution) {
       console.log('Correct!');
       step += 1;
-    } else if (!solution && (answer !== 'no')) {
-      return console.log(`'${answer}' is wrong answer ;(. Correct answer was 'no'. \nLet's try again, ${name}!`);
+    } else if ((answer !== 'no') && !solution) {
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was 'no'. \nLet's try again, ${name}!`);
+      return;
     } else {
-      return console.log(`'${answer}' is wrong answer ;(. Correct answer was 'yes'. \nLet's try again, ${name}!`);
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was 'yes'. \nLet's try again, ${name}!`);
+      return;
     }
   }
 };
@@ -55,7 +60,11 @@ const getOperation = () => {
 };
 
 const brainCalc = () => {
-  welcome();
+  console.log('Welcome to the Brain Games!');
+
+  const name = readlineSync.question('May I have your name? ');
+
+  console.log(`Hello ${name}!`);
 
   console.log('What is the result of the expression?');
 
@@ -86,7 +95,8 @@ const brainCalc = () => {
       console.log('Correct!');
       step += 1;
     } else {
-      return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${solution}'. \nLet's try again, ${name}!`);
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${solution}'. \nLet's try again, ${name}!`);
+      return;
     }
   }
 };
@@ -102,7 +112,11 @@ const getGcd = (a, b) => {
 };
 
 const brainGcd = () => {
-  welcome();
+  console.log('Welcome to the Brain Games!');
+
+  const name = readlineSync.question('May I have your name? ');
+
+  console.log(`Hello ${name}!`);
 
   console.log('Find the greatest common divisor of given numbers.');
 
@@ -123,9 +137,63 @@ const brainGcd = () => {
       console.log('Correct!');
       step += 1;
     } else {
-      return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${solution}'. \nLet's try again, ${name}!`);
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${solution}'. \nLet's try again, ${name}!`);
+      return;
     }
   }
 };
 
-export { brainEven, brainCalc, brainGcd };
+// brain-progression.js
+
+const brainProgres = () => {
+  console.log('Welcome to the Brain Games!');
+
+  const name = readlineSync.question('May I have your name? ');
+
+  console.log(`Hello ${name}!`);
+
+  console.log('What number is missing in the progression?');
+
+  for (let step = 0; step <= 3;) {
+    if (step === 3) {
+      console.log(`Congratulations, ${name}!`);
+      break;
+    }
+
+    const firstNumber = getRandomNum();
+    const countProgression = Math.floor((Math.random() * 6) + 5);
+    const d = Math.floor((Math.random() * 10) + 1);
+    const hiddenNumber = Math.floor(Math.random() * countProgression);
+    const progression = [];
+    let temp = firstNumber;
+
+    for (let i = 0; i < countProgression; i += 1) {
+      progression.push(temp);
+
+      temp += d;
+    }
+
+    const originalNumber = progression[hiddenNumber];
+    progression[hiddenNumber] = '..';
+
+    console.log('Question:', progression.join(' '));
+
+    const answer = readlineSync.question('Your answer: ');
+    const solution = originalNumber;
+
+    if (Number(answer) === solution) {
+      console.log('Correct!');
+      step += 1;
+    } else {
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${solution}'. \nLet's try again, ${name}!`);
+      return;
+    }
+  }
+};
+
+export {
+  brainEven,
+  brainCalc,
+  brainGcd,
+  brainProgres,
+};
