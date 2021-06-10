@@ -191,9 +191,62 @@ const brainProgres = () => {
   }
 };
 
+// brain-prime.js
+
+const brainPrime = () => {
+  console.log('Welcome to the Brain Games!');
+
+  const name = readlineSync.question('May I have your name? ');
+
+  console.log(`Hello ${name}!`);
+
+  console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
+
+  const isPrime = (number) => {
+    if (number < 2) {
+      return false;
+    }
+
+    for (let i = 2; i <= number / 2; i += 1) {
+      if (number % i === 0) {
+        return false;
+      }
+    }
+
+    return true;
+  };
+
+  for (let step = 0; step <= 3;) {
+    if (step === 3) {
+      console.log(`Congratulations, ${name}!`);
+      break;
+    }
+
+    const number = getRandomNum();
+    console.log(`Qusetion: ${number}`);
+    const answer = readlineSync.question('Your answer: ');
+    const solution = isPrime(number);
+
+    if ((answer === 'yes') && solution) {
+      console.log('Correct!');
+      step += 1;
+    } else if ((answer === 'no') && !solution) {
+      console.log('Correct!');
+      step += 1;
+    } else if ((answer !== 'no') && !solution) {
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was 'no'. \nLet's try again, ${name}!`);
+      return;
+    } else {
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was 'yes'. \nLet's try again, ${name}!`);
+      return;
+    }
+  }
+};
+
 export {
   brainEven,
   brainCalc,
   brainGcd,
   brainProgres,
+  brainPrime,
 };
