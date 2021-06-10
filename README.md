@@ -5,7 +5,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
 
 ### GitHub Actions
-![lint](https://github.com/Bohdan2241/frontend-project-lvl1/workflows/lint.yml/badge.svg)
+[![lint](https://github.com/Bohdan2241/frontend-project-lvl1/workflows/lint.yml/badge.svg)]
 
 https://asciinema.org/a/418927 <br />
 https://asciinema.org/a/418940 <br />
