@@ -1,6 +1,6 @@
 {
   "name": "@hexlet/code",
-  "version": "0.1.5",
+  "version": "0.2.0",
   "description": "[![Actions Status](https://github.com/Bohdan2241/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/Bohdan2241/frontend-project-lvl1/actions)",
   "main": "index.js",
   "type": "module",
