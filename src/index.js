@@ -8,8 +8,9 @@ const game = (description, func) => {
   console.log(description);
 
   for (let i = 0; i < 3; i += 1) {
-    const step = func();
-    const [question, solution] = step;
+    const data = func();
+    const question = data[0];
+    const solution = data[1];
 
     console.log(question);
 
