@@ -3,7 +3,7 @@ import readlineSync from 'readline-sync';
 const game = (description, func) => {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ');
-  console.log(`Hello ${name}!`);
+  console.log(`Hello, ${name}!`);
 
   console.log(description);
 
@@ -12,7 +12,7 @@ const game = (description, func) => {
     const question = data[0];
     const solution = data[1];
 
-    console.log(question);
+    console.log(`Question: ${question}`);
 
     const answer = readlineSync.question('Your answer: ');
 

@@ -13,7 +13,7 @@ const isEven = (num) => {
 const brainStep = () => {
   const number = getRandomNum();
 
-  const question = `Qusetion: ${number}`;
+  const question = number;
 
   const solution = isEven(number) ? 'yes' : 'no';
 
