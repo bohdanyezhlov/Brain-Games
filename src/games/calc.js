@@ -29,7 +29,7 @@ const brainStep = () => {
   const secondNumber = getRandomNum();
   const operation = getOperation();
 
-  const question = `Question: ${firstNumber} ${operation} ${secondNumber}`;
+  const question = `${firstNumber} ${operation} ${secondNumber}`;
   const solution = String(getSolution(firstNumber, secondNumber, operation));
 
   return [question, solution];

@@ -20,7 +20,7 @@ const isPrime = (number) => {
 const brainStep = () => {
   const number = getRandomNum();
 
-  const question = `Qusetion: ${number}`;
+  const question = number;
   const solution = isPrime(number) ? 'yes' : 'no';
 
   return [question, solution];

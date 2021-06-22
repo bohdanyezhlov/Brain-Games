@@ -15,7 +15,7 @@ const brainStep = () => {
   const firstNumber = getRandomNum();
   const secondNumber = getRandomNum();
 
-  const question = `Qusetion: ${firstNumber} ${secondNumber}`;
+  const question = `${firstNumber} ${secondNumber}`;
 
   const solution = String(getGcd(firstNumber, secondNumber));
 

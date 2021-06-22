@@ -20,7 +20,7 @@ const brainStep = () => {
   const originalNumber = progression[hiddenNumber];
   progression[hiddenNumber] = '..';
 
-  const question = `Question: ${progression.join(' ')}`;
+  const question = progression.join(' ');
 
   const solution = String(originalNumber);
 
