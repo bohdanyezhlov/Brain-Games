@@ -11,7 +11,7 @@ const getGcd = (a, b) => {
   return getGcd(b, a % b);
 };
 
-const brainStep = () => {
+const makeNewStep = () => {
   const firstNumber = getRandomNum();
   const secondNumber = getRandomNum();
 
@@ -23,7 +23,7 @@ const brainStep = () => {
 };
 
 const brainGcd = () => {
-  game(description, brainStep);
+  game(description, makeNewStep);
 };
 
 export default brainGcd;

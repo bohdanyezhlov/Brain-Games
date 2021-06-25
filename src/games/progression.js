@@ -3,7 +3,7 @@ import getRandomNum from '../getRandomNum.js';
 
 const description = 'What number is missing in the progression?';
 
-const brainStep = () => {
+const makeNewStep = () => {
   const firstNumber = getRandomNum();
   const countProgression = Math.floor((Math.random() * 6) + 5);
   const d = Math.floor((Math.random() * 10) + 1);
@@ -28,7 +28,7 @@ const brainStep = () => {
 };
 
 const brainProgression = () => {
-  game(description, brainStep);
+  game(description, makeNewStep);
 };
 
 export default brainProgression;

@@ -30,7 +30,7 @@ const getSolution = (firstNumber, secondNumber, operation) => {
   return solution;
 };
 
-const brainStep = () => {
+const makeNewStep = () => {
   const firstNumber = getRandomNum();
   const secondNumber = getRandomNum();
   const operation = getOperation();
@@ -42,7 +42,7 @@ const brainStep = () => {
 };
 
 const brainCalc = () => {
-  game(description, brainStep);
+  game(description, makeNewStep);
 };
 
 export default brainCalc;

@@ -10,7 +10,7 @@ const isEven = (num) => {
   return false;
 };
 
-const brainStep = () => {
+const makeNewStep = () => {
   const number = getRandomNum();
 
   const question = number;
@@ -21,7 +21,7 @@ const brainStep = () => {
 };
 
 const brainEven = () => {
-  game(description, brainStep);
+  game(description, makeNewStep);
 };
 
 export default brainEven;
