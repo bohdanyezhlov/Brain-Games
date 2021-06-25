@@ -13,12 +13,18 @@ const getOperation = () => {
 const getSolution = (firstNumber, secondNumber, operation) => {
   let solution = 0;
 
-  if (operation === '+') {
-    solution = firstNumber + secondNumber;
-  } else if (operation === '-') {
-    solution = firstNumber - secondNumber;
-  } else {
-    solution = firstNumber * secondNumber;
+  switch (operation) {
+    case '+':
+      solution = firstNumber + secondNumber;
+      break;
+    case '-':
+      solution = firstNumber - secondNumber;
+      break;
+    case '*':
+      solution = firstNumber * secondNumber;
+      break;
+    default:
+      console.log('Unexpected operator');
   }
 
   return solution;
