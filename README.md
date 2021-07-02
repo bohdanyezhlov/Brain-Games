@@ -1,6 +1,6 @@
 
 [![Actions Status](https://github.com/Bohdan2241/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/Bohdan2241/frontend-project-lvl1/actions) 
-[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability) 
+[![Maintainability](https://api.codeclimate.com/v1/badges/d54aa8f06e85e4521703/maintainability)](https://codeclimate.com/github/Bohdan2241/frontend-project-lvl1/maintainability)
 [![local-linter](https://github.com/Bohdan2241/frontend-project-lvl1/workflows/local-linter/badge.svg)](https://github.com/Bohdan2241/frontend-project-lvl1/actions)
 ### Описание проекта
 #### «Игры разума» — набор из пяти консольных игр, построенных по принципу популярных мобильных приложений для прокачки мозга. Каждая игра задает вопросы, на которые нужно дать правильные ответы. После трех правильных ответов считается, что игра пройдена. Неправильные ответы завершают игру и предлагают пройти ее заново. Игры:
