@@ -19,7 +19,7 @@ const getSolution = (firstNumber, secondNumber, operation) => {
     case '*':
       return firstNumber * secondNumber;
     default:
-      console.log('Unexpected operator');
+      throw Error('Unexpected operator');
   }
 };
 
