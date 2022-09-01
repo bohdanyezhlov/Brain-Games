@@ -5,7 +5,7 @@ const description = 'What is the result of the expression?';
 
 const getOperation = () => {
   const operations = ['+', '-', '*'];
-  const randomNum = getRandomNum(0, 2);
+  const randomNum = getRandomNum(0, operations.length - 1);
   const operation = operations[randomNum];
   return operation;
 };
@@ -19,11 +19,11 @@ const getSolution = (firstNumber, secondNumber, operation) => {
     case '*':
       return firstNumber * secondNumber;
     default:
-      throw Error('Unexpected operator');
+      throw Error(`Unexpected operator ${operation}`);
   }
 };
 
-const makeNewStep = () => {
+const generateQeustionAnswer = () => {
   const firstNumber = getRandomNum(0, 100);
   const secondNumber = getRandomNum(0, 100);
   const operation = getOperation();
@@ -35,7 +35,7 @@ const makeNewStep = () => {
 };
 
 const runBrainCalc = () => {
-  runGame(description, makeNewStep);
+  runGame(description, generateQeustionAnswer);
 };
 
 export default runBrainCalc;

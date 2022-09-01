@@ -16,7 +16,7 @@ const createProgression = (firstNumber, lengthOfProgression, delta) => {
   return progression;
 };
 
-const makeNewStep = () => {
+const generateQeustionAnswer = () => {
   const firstNumber = getRandomNum(0, 100);
   const lengthOfProgression = getRandomNum(5, 10);
   const delta = getRandomNum(1, 10);
@@ -34,7 +34,7 @@ const makeNewStep = () => {
 };
 
 const runBrainProgression = () => {
-  runGame(description, makeNewStep);
+  runGame(description, generateQeustionAnswer);
 };
 
 export default runBrainProgression;

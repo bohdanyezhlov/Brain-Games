@@ -17,7 +17,7 @@ const isPrime = (number) => {
   return true;
 };
 
-const makeNewStep = () => {
+const generateQeustionAnswer = () => {
   const number = getRandomNum(0, 100);
 
   const question = String(number);
@@ -27,7 +27,7 @@ const makeNewStep = () => {
 };
 
 const runBrainPrime = () => {
-  runGame(description, makeNewStep);
+  runGame(description, generateQeustionAnswer);
 };
 
 export default runBrainPrime;

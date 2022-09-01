@@ -5,7 +5,7 @@ const description = 'Answer "yes" if given number is even. Otherwise answer "no"
 
 const isEven = (num) => num % 2;
 
-const makeNewStep = () => {
+const generateQeustionAnswer = () => {
   const number = getRandomNum(0, 100);
 
   const question = String(number);
@@ -15,7 +15,7 @@ const makeNewStep = () => {
 };
 
 const runBrainEven = () => {
-  runGame(description, makeNewStep);
+  runGame(description, generateQeustionAnswer);
 };
 
 export default runBrainEven;
