@@ -1,40 +1,63 @@
+# Brain Games
 
 [![Actions Status](https://github.com/Bohdan2241/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/Bohdan2241/frontend-project-lvl1/actions) 
 [![Maintainability](https://api.codeclimate.com/v1/badges/d54aa8f06e85e4521703/maintainability)](https://codeclimate.com/github/Bohdan2241/frontend-project-lvl1/maintainability)
 [![local-linter](https://github.com/Bohdan2241/frontend-project-lvl1/workflows/local-linter/badge.svg)](https://github.com/Bohdan2241/frontend-project-lvl1/actions)
-### Установка:
+
+## Description:
+### "Brain Games" is a set of five console games inspired by popular mobile brain-pumping apps. Each game asks questions to be answered correctly. Once three correct answers are given, the game ends. Incorrect answers end the game and prompt you to play it again. The games are:
+
+- Calculator. Calculate random arithmetic expressions
+- Progression. Find missing numbers in a number sequence
+- Determining an even number
+- Determining the greatest common divisor
+- Determining a prime number
+
+
+
+## Installation:
+1) Clone this repository to your filesystem
 ```
-make install
+https://github.com/bohdanyezhlov/frontend-project-lvl1.git
 ```
 
-### Описание проекта
-#### «Игры разума» — набор из пяти консольных игр, построенных по принципу популярных мобильных приложений для прокачки мозга. Каждая игра задает вопросы, на которые нужно дать правильные ответы. После трех правильных ответов считается, что игра пройдена. Неправильные ответы завершают игру и предлагают пройти ее заново. Игры:
-- Игра "Проверка на чётность" 
-    
-    Пользователю показывается случайное число. И ему нужно ответить yes, если число чётное, или no — если нечётное.
+2) Go to the created directory named `frontend-project-lvl1`
 
-[![asciicast](https://asciinema.org/a/418927.svg)](https://asciinema.org/a/418927)
+3) Create links to run games locally
+ ```
+ npm link
+ ```
 
-- Игра "Калькулятор"
 
-    Пользователю показывается случайное математическое выражение, например 35 + 16, которое нужно вычислить и записать правильный ответ.
+
+## Demo:
+
+### Game: "Calculator"
+#### The user is shown a random math expression, such as 35 + 16, which they must calculate and enter the result.
     
 [![asciicast](https://asciinema.org/a/418940.svg)](https://asciinema.org/a/418940)
 
-- Игра "НОД"
 
-    Пользователю показывается два случайных числа, например, 25 50. Пользователь должен вычислить и ввести наибольший общий делитель этих чисел.
-    
+
+### Game: "Is Even?"
+#### The user is shown a random number, and they should answer "yes" if the number is even, or "no" if it is odd.
+
+[![asciicast](https://asciinema.org/a/418927.svg)](https://asciinema.org/a/418927)
+
+
+
+### Game: "GCD"
+#### The user is shown two random numbers, such as 25 and 50. They must calculate and enter the greatest common divisor of these numbers.
+
 [![asciicast](https://asciinema.org/a/419070.svg)](https://asciinema.org/a/419070)
 
-- Игра "Арифметическая прогрессия"
 
-    Пользователю показывается ряд чисел, образующий арифметическую прогрессию, одно из чисел заменено на  "..". Игрок должен определить это число.
+### Game: "Arithmetic Progression"
+#### The user is shown a number series that forms an arithmetic progression, with any one number replaced with two dots. The user must figure out the hidden number.
 
 [![asciicast](https://asciinema.org/a/419420.svg)](https://asciinema.org/a/419420)
 
-- Игра "Простое ли число?"
-
-    Пользователю показывается случайное число. И ему нужно ответить yes, если число простое, или no — если не простое.
+### Game: "Is Prime?"
+The user is shown a random number. They need to answer "yes" if the number is prime, or "no" if it is not prime.
     
 [![asciicast](https://asciinema.org/a/419421.svg)](https://asciinema.org/a/419421)
